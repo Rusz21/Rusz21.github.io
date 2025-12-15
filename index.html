@@ -24,6 +24,7 @@
     <div class="row">
       <nav class="nav" role="navigation">
         <ul class="nav__items">
+          <li class="nav__item"><a href="#blog" class="nav__link">Blog</a></li>
           <li class="nav__item"><a href="#projects" class="nav__link">Projects</a></li>
           <li class="nav__item"><a href="#about" class="nav__link">About</a></li>
           <li class="nav__item"><a href="#contact" class="nav__link">Contact</a></li>
@@ -42,6 +43,92 @@
   </header>
 
   <main role="main">
+
+<!-- ***** Blog Entry ***** -->
+<section class="projects" id="blog">
+  <div class="row">
+    <h2>🧠 Learning Deep Learning: Understanding the Learning Rate</h2>
+
+    <div class="work__box">
+      <div class="work__text">
+
+        <h3>What is the Learning Rate?</h3>
+        <p>
+          The <strong>learning rate</strong> is a crucial hyperparameter in deep learning that controls how much a model’s
+          weights are updated during training. Specifically, it determines the step size taken during gradient descent
+          when minimizing the loss function.
+        </p>
+
+        <p>
+          In mathematical terms, weight updates follow:
+        </p>
+
+        <p><em>
+          w<sub>new</sub> = w<sub>old</sub> − η ∇L(w)
+        </em></p>
+
+        <p>
+          where <strong>η (eta)</strong> is the learning rate and ∇L(w) is the gradient of the loss with respect to the weights.
+        </p>
+
+        <h3>Theoretical Effect on Training</h3>
+        <p>
+          A <strong>small learning rate</strong> leads to slow but stable convergence, while a
+          <strong>large learning rate</strong> can speed up training but risks overshooting the optimal solution.
+          Choosing an appropriate learning rate is critical for both convergence and generalization.
+        </p>
+
+        <h3>Experiment Setup</h3>
+        <p>
+          To observe the effect of the learning rate, I trained a simple neural network on a small dataset
+          using three different learning rates:
+        </p>
+
+        <ul class="work__list">
+          <li>η = 0.0001 (very small)</li>
+          <li>η = 0.01 (moderate)</li>
+          <li>η = 0.1 (large)</li>
+        </ul>
+
+        <p>
+          The model architecture and dataset were kept constant. Only the learning rate was changed.
+          Training loss and accuracy were recorded across epochs.
+        </p>
+
+        <h3>Results and Observations</h3>
+        <p>
+          The experiment revealed that:
+        </p>
+
+        <ul class="work__list">
+          <li>Very small learning rates converged slowly but were stable.</li>
+          <li>Moderate learning rates achieved faster convergence and better accuracy.</li>
+          <li>Large learning rates caused unstable training and fluctuating loss.</li>
+        </ul>
+
+        <p>
+          These results highlight the importance of tuning the learning rate carefully.
+          A well-chosen learning rate can significantly improve training efficiency and model performance.
+        </p>
+
+        <h3>Key Takeaways</h3>
+        <p>
+          From this experiment, I learned that the learning rate directly affects convergence speed,
+          stability, and final model accuracy. In future projects, I plan to use learning rate scheduling
+          and adaptive optimizers to further improve training performance.
+        </p>
+
+        <h3>References</h3>
+        <ul class="work__list">
+          <li>Goodfellow et al., <em>Deep Learning</em>, MIT Press</li>
+          <li>PyTorch Documentation: Optimizers</li>
+        </ul>
+
+      </div>
+    </div>
+
+  </div>
+</section>
 
     <!-- ***** Projects ***** -->
 <section class="projects" id="projects">
